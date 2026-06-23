@@ -95,6 +95,13 @@ export function MarkdownDocumentTab({
 
   return (
     <section className="markdown-tab" aria-label="Markdown document">
+      <div className="markdown-tab__toolbar">
+        <div>
+          <h2>Notes</h2>
+          <p className={`markdown-status markdown-status--${saveState}`}>{status}</p>
+        </div>
+      </div>
+
       {!hasPdf ? (
         <div className="sidebar__empty">Open a PDF to create a document.</div>
       ) : !isStorageReady ? (
